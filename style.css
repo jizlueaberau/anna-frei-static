@@ -10,6 +10,15 @@ body {
 [class+="col-"] {
 	padding: 1rem;
 }
+.no-gutter > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/*--- Global Classes ---*/
+.first-section {
+	margin-top: 17.5rem;
+}
 
 /*--- Debugger on right lower corner ---*/
 #debugger {
@@ -20,7 +29,6 @@ body {
 	background-color: black;
 	padding: 0.4rem;
 }
-
 
 /*============ MASTHEAD ============*/
 
@@ -100,7 +108,7 @@ body {
 .navbar-light .navbar-nav .nav-link:visited {
 	text-align: center;
 	color: #bb1730;
-	font-weight: 600;
+	font-weight: 400;
 }
 .navbar-light .navbar-nav .nav-link:active,
 .navbar-light .navbar-nav .nav-link:hover {
@@ -120,6 +128,36 @@ body {
 	visibility: visible;
 	opacity: 1;
 }
+
+/*============ QUOTATION ============*/
+
+.quotation {
+	padding: 1.5rem 0;
+	background-color: #bb1730;
+	text-align: center;
+}
+.quotation p {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 0.2rem;
+}
+.quotation small {
+	position: relative;
+	font-size: 0.75rem;
+	font-weight: 300;
+	color: #fff;
+}
+.quotation .q1 { animation-delay: 0.3s; }
+.quotation .q2 { animation-delay: 0.6s; }
+.quotation .q3 { animation-delay: 0.9s; }
+.quotation .q4 { animation-delay: 1.2s; }
+.quotation .q5 { animation-delay: 1.5s; }
+
+/*============ MAIN SECTION ============*/
+
+#main .img-fluid { animation-delay: 1s; }
 
 /*============ BREAK POINTS ============*/
 
@@ -142,6 +180,11 @@ body {
 	.nav-link.active .fingerprint {
 		top: -0.2rem;
 		opacity: 1;
+	}
+}
+@media (min-width: 768px) {
+	.quotation p {
+		font-size: 1.75rem;
 	}
 }
 
