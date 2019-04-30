@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600');
+
+body {
+	overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+	color: #030303;
+}
+
+/*--- Extra Bootstrap Column Padding ---*/
+[class+="col-"] {
+	padding: 1rem;
+}
+
+/*--- Debugger on right lower corner ---*/
+#debugger {
+	position: fixed;
+	right: 0; bottom: 0;
+	font-size: 0.8rem;
+	color: white;
+	background-color: black;
+	padding: 0.4rem;
+}
+
+
+/*============ MASTHEAD ============*/
+
+#masthead {
+	position: absolute;
+	top: 0; left: 50%;
+	width: 14rem;
+	margin-left: -7rem;
+	text-align: center;
+	padding: 1rem 0;
+	z-index: 10;
+}
+#masthead.fixed {
+	position: fixed;
+	top: -130px;
+}
+#masthead.hidden {
+	display: none;
+}
+#masthead.hidden {
+	display: none;
+}
+#masthead h1 {
+	line-height: 1.2rem;
+	font-size: 1rem;
+	font-weight: 300;
+}
+#masthead img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#masthead h1 a:link,
+#masthead h1 a:visited {
+	text-decoration: none;
+	color: #bb1730;
+}
+.brand-text {
+	height: 3.8rem;
+	margin: 0.4rem 0;
+}
+.brand-image {
+	height: 5rem;
+	margin-top: 0.8rem;
+}
+
+/*============ NAVIGATION ============*/
+
+.navbar {
+	z-index: 1;
+	background-color: #fff;
+}
+.navbar.shadowed {
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+}
+.fa, .fas {
+	color: #bb1730;
+	font-size: 2rem;
+}
+.navbar-toggler {
+	border: none;
+	padding: 1.7rem 1rem;
+}
+.navbar-toggler-icon {
+	background-image: none !important;
+}
+.navbar-nav {
+	position: relative;
+	top: 0; left: 0;
+	width: 100%;
+}
+.nav-item { font-size: 1.1rem; }
+.nav-link { position: relative; }
+.navbar-light .navbar-nav .nav-link:link,
+.navbar-light .navbar-nav .nav-link:visited {
+	text-align: center;
+	color: #bb1730;
+	font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link:active,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #bb1730;
+}
+.navbar-collapse.collapse .brand-image,
+.navbar-collapse.collapsing .brand-image {
+	position: fixed;
+	top: 0; left: 50%;
+	opacity: 0;
+	visibility: hidden;
+	margin-left: -3.375rem;
+	-webkit-transition: opacity 300ms, visibility 300ms;
+	transition: opacity 300ms, visibility 300ms;
+}
+.navbar-collapse.show .brand-image {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*============ BREAK POINTS ============*/
+
+@media (min-width: 992px) {
+	.navbar-nav { width: 75%; padding: 1.4rem 0; }
+	.nav-item { width: 33.33333333%; }
+	.nav-link .fingerprint {
+		display: block;
+		position: absolute;
+		top: -1.2rem; left: 50%;
+		margin-left: -0.3125rem;
+		background-color: #bb1730;
+		width: 0.625rem; height: 0.625rem;
+		border-radius: 100%;
+		opacity: 0;
+		-webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    	transition:         all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	.nav-link:hover .fingerprint,
+	.nav-link.active .fingerprint {
+		top: -0.2rem;
+		opacity: 1;
+	}
+}
+
+/*============ BOOTSTRAP BREAK POINTS: 
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
