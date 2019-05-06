@@ -64,49 +64,89 @@
 	</nav>
 	<!--- End Navigation -->
 
-	<!-- Start Red Blockquote Mindfulness -->
-	<div id="mindfulness" class="quotation red first-section">
-		<div class="container-fluid">
-			<p class="q1 wow fadeInUp">Wenn die Achtsamkeit etwas Schönes berührt,</p>
-			<p class="q2 wow fadeInUp">offenbart sich dessen Schönheit.</p>
-			<p class="q3 wow fadeInUp">Wenn sie etwas Schmerzvolles berührt,</p>
-			<p class="q4 wow fadeInUp">wandelt sie es um und heilt es.</p>
-			<small class="q5 wow fadeInUp">&mdash;&nbsp;&nbsp;Zen-Buddhismus&nbsp;&nbsp;&mdash;</small>
-		</div>
-	</div>
-	<!-- End Red Blockquote Mindfulness -->
-
 	<!-- Start Main Section -->
-	<div id="main" class="section">
-		<div class="container-fluid">
-			<div class="row no-gutter">
-				<div class="col-12 col-md-6">
-					<figure role="group">
-						<img src="img/img_coaching.jpg" class="img-fluid wow fadeIn" alt="Beratungsgespräch" />
-					</figure>
-					<div class="wow fadeInUp content-box left-side right-bordered">
-						<h2>Seelenzentriertes Coaching</h2>
-						<p>
-							unterstützt Sie mit Fragen und konkreten Übungen tiefer ins Erleben und in die Lebendigkeit des Lebens einzutauchen.
-						</p>
-						<p>
-							Mit seelenzentriertem Coaching erkennen Sie, was Sie leben und was Sie verändern möchten, welche inneren Ressourcen Sie auf Ihrem Weg unterstützen, welche Anteile in Ihnen verletzt sind und integriert werden dürfen.
-						</p>
-					</div>
+	<div id="praxis" class="first-section">
+		<div class="grid">
+			<div class="grid-sizer"></div>
+			<div class="grid-item grid-item--width-2">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/01-anna-frei-bern.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item">
+				<div class="quotation quote1 red">
+					<h3>Shiatsu bewegt</h3>
 				</div>
-				<div class="col-12 col-md-6">
-					<figure role="group">
-						<img src="img/img_shiatsu.jpg" class="img-fluid wow fadeIn" alt="Körperbehandlung" />
-					</figure>
-					<div class="wow fadeInUp content-box right-side">
-						<h2 >Shiatsu</h2>
-						<p>
-							ist eine ganzheitliche Therapieform, die ihren Ursprung in Japan und der chinesischen Gesundheitslehre hat.
-						</p>
-						<p>
-							Shiatsu (übersetzt Fingerdruck) aktiviert über Berührung die natürlichen Selbstheilungskräfte und wirkt dadurch positiv auf die Gesundheit und das Zusammenspiel von körperlicher, seelischer und geistiger Ebene.
-						</p>
+			</div>
+			<div class="grid-item">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/02-praxis-shiatsu-bern.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item grid-item--width-3">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/03-shiatsu.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item grid-item--width-2">
+				<div class="quotation quote2 gold">
+					<h3>
+						Die erste<br />
+						menschliche Erfahrung<br />
+						ist die Berührung
+					</h3>
 				</div>
+			</div>
+			<div class="grid-item">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/04-shiatsu-bern-praxis.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/05-praxis-shiatsu.jpg" alt="" />
+				</figure>
+				<div class="quotation quote3 red">
+					<h3>
+						Shiatsu<br />
+						setzt blockierte<br />
+						Energie frei
+					</h3>
+				</div>
+			</div>
+			<div class="grid-item grid-item--width-2">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/06-shiatsu-bern.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item grid-item--width-2">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/07-bern-shiatsu-praxis.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/08-bern-praxis-shiatsu.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item grid-item--width-3">
+				<div class="quotation quote4 gold">
+					<h3>
+						Fühlen Sie Sich lebendig?<br />
+						Wo möchten Sie einen Schritt weiterkommen?<br />
+						Leben Sie Ihren Traum?
+					</h3>
+				</div>
+			</div>
+			<div class="grid-item grid-item--width-3">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/09-seelenzentriertes-coaching-bern.jpg" alt="" />
+				</figure>
+			</div>
+			<div class="grid-item grid-item--width-3">
+				<figure role="group">
+					<img class="img-fluid wow fadeIn" src="img/10-shiatsu-material.jpg" alt="" />
+				</figure>
 			</div>
 		</div>
 	</div>
@@ -118,6 +158,21 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		$(document).ready(function() {
+			var $grid = $(".grid").imagesLoaded( function() {
+				$(".grid").masonry({
+					itemSelector: ".grid-item",
+					columnWidth: ".grid-sizer",
+					percentPosition: true
+				});
+			});
+		});
+	/* ]] */
+	</script>
 	<script src="js/custom.js"></script>
 	<!-- End of Script Source Files -->
 

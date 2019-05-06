@@ -1,3 +1,7 @@
+/*========== INIT WOW ANIMATION CSS ON SCROLL TRIGGER ==========*/
+
+new WOW().init();
+
 /*========== TOGGLE MASTHEAD VISIBILITY FOR MOBILE NAVIGATION ==========*/
 
 $(document).ready(function () { //when document loads completely.
@@ -41,4 +45,3 @@ $(document).ready(function () { //when document loads completely.
     }
   });
 });
-

@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600');
 
+* { box-sizing: border-box; }
+
 body {
 	overflow-x: hidden;
 	font-family: 'Open Sans', sans-serif;
 	color: #030303;
+	font-weight: 300;
 }
 
 /*--- Extra Bootstrap Column Padding ---*/
@@ -19,6 +22,12 @@ body {
 .first-section {
 	margin-top: 17.5rem;
 }
+figure {
+	margin-bottom: 0;
+}
+figure figcaption {
+	display: none;
+}
 
 /*--- Debugger on right lower corner ---*/
 #debugger {
@@ -28,6 +37,24 @@ body {
 	color: white;
 	background-color: black;
 	padding: 0.4rem;
+}
+
+/*============ TITLES ============*/
+
+h1, h2, h3, h4, h5, h6,
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active,
+h2 a:link, h2 a:visited, h2 a:hover, h2 a:active,
+h3 a:link, h3 a:visited, h3 a:hover, h3 a:active,
+h4 a:link, h4 a:visited, h4 a:hover, h4 a:active,
+h5 a:link, h5 a:visited, h5 a:hover, h5 a:active,
+h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
+	margin: 0; 
+	color: #bb1730;
+	text-decoration: none;
+	font-weight: 300;
+}
+h2 {
+	font-size: 2.125rem;
 }
 
 /*============ MASTHEAD ============*/
@@ -54,7 +81,6 @@ body {
 #masthead h1 {
 	line-height: 1.2rem;
 	font-size: 1rem;
-	font-weight: 300;
 }
 #masthead img {
 	display: block;
@@ -64,7 +90,6 @@ body {
 #masthead h1 a:link,
 #masthead h1 a:visited {
 	text-decoration: none;
-	color: #bb1730;
 }
 .brand-text {
 	height: 3.8rem;
@@ -132,9 +157,24 @@ body {
 /*============ QUOTATION ============*/
 
 .quotation {
-	padding: 1.5rem 0;
-	background-color: #bb1730;
 	text-align: center;
+}
+.quotation.red {
+	background-color: #bb1730;
+}
+.quotation.gold {
+	background-color: #e6d5bd;
+}
+.quotation h3 {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.quotation.red h3 {
+	color: #fff;
+}
+.quotation.gold h3 {
+	color: #030303;
 }
 .quotation p {
 	color: #fff;
@@ -154,10 +194,67 @@ body {
 .quotation .q3 { animation-delay: 0.9s; }
 .quotation .q4 { animation-delay: 1.2s; }
 .quotation .q5 { animation-delay: 1.5s; }
+#mindfulness.quotation { padding: 1.5rem 0; }
 
-/*============ MAIN SECTION ============*/
+/*============ CONTENT SECTION ============*/
 
-#main .img-fluid { animation-delay: 1s; }
+.img-fluid { }
+.content-box {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.content-box.right-bordered {
+	border-right: 1px solid #ccc;
+}
+.content-box h2 {
+	margin-bottom: 2rem;
+}
+.content-box p {
+	font-size: 1.125rem;
+}
+#main .img-fluid { animation-delay: 2s; }
+
+/*============ MASONRY SECTION ============*/
+
+/* ---- grid ---- */
+
+.grid {
+	max-width: 100%;
+}
+
+/* clearfix */
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+	width: 100%;
+	min-width: 100%;
+}
+.grid-item {
+	float: left;
+	padding: 2rem;
+}
+.grid-item .quotation {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+.grid-item .quotation.quote3 {
+	margin-top: 4rem;
+}
+.grid-item--width-2 {
+	width: 100%
+}
+.grid-item--width-3 {
+	width: 100%;
+}
 
 /*============ BREAK POINTS ============*/
 
@@ -181,10 +278,45 @@ body {
 		top: -0.2rem;
 		opacity: 1;
 	}
+	/* --- masonry settings --- */
+	.grid-sizer,
+	.grid-item {
+  		width: 33.333%;
+  		min-width: 180px;
+	}
+	.grid-item--width-2 {
+		width: 66.666%
+	}
+	.grid-item--width-3 {
+		width: 100%;
+		min-width: 992px;
+	}
+	.grid-item .quotation.quote1 {
+		padding-top: 117.5%;
+		padding-bottom: 117.5%;
+	}
+	.grid-item .quotation.quote2 {
+		padding-top: 35%;
+		padding-bottom: 35%;
+	}
+	.grid-item .quotation.quote3 {
+		padding-top: 57%;
+		padding-bottom: 57%;
+	}
+	.grid-item .quotation.quote4 {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
 }
 @media (min-width: 768px) {
 	.quotation p {
 		font-size: 1.75rem;
+	}
+	.content-box.left-side {
+		padding-left: 20%;
+	}
+	.content-box.right-side {
+		padding-right: 20%;
 	}
 }
 
